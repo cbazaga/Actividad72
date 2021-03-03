@@ -11,12 +11,23 @@ package programa;
  */
 public class Taller {
     
-    
     public void AltaVehiculo(){
         
+    }
+    
+    public void ReclamarVehiculo(){
         
+    }
+    
+    public void MoverVehiculos(){
         
+    }
+    
+    public void InfoBox(){
         
+    }
+    
+    public void InfoTodosBoxes(){
         
     }
     
