@@ -10,5 +10,8 @@ import programa.*;
  * @author ciclost
  */
 public class TallerITV {
-    
+    public static void main(String[] args){
+        Taller taller = new Taller();
+        Menu.menu(taller);
+    }
 }

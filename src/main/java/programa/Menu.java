@@ -8,10 +8,13 @@ package programa;
 /**
  *
  * @author ciclost
- */
+*
+* 
+* 
+* Mi programa se basa en que el menú es un método estático 
+* y va llamando a las diferentes funciones que se piden, 
+* las cuales tienen sus propios métodos implementados */
 public class Menu {
-    
-    
     public static void menu(Taller taller){
         GestorIO entrada = new GestorIO();
         int numero = -1;

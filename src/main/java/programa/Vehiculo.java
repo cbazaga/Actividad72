@@ -28,14 +28,14 @@ public class Vehiculo {
         this.tipo = tipo;
     }
     
-    public Vehiculo pedir(ColaGeneral cola){
+    public void pedir(ColaGeneral cola){
         GestorIO entrada = new GestorIO();
         String tipo=null;
         String modelo=null;
         String matricula=null;
-        System.out.println("Introduce el tipo de vehículo en minúsculas: ");
+        System.out.println("Introduce el tipo de vehículo: ");
         tipo = entrada.inString();
-        while(tipoVehiculo.valueOf(tipo) != tipoVehiculo.camion && tipoVehiculo.valueOf(tipo) != tipoVehiculo.coche && tipoVehiculo.valueOf(tipo) != tipoVehiculo.furgoneta && tipoVehiculo.valueOf(tipo) != tipoVehiculo.microbus){
+        while(tipo.equalsIgnoreCase("camion")==false && tipo.equalsIgnoreCase("coche")==false && tipo.equalsIgnoreCase("furgoneta") && tipo.equalsIgnoreCase("microbus") == false){
             System.out.println("Vuelve a intentarlo");
             tipo = entrada.inString();
         }
@@ -49,12 +49,14 @@ public class Vehiculo {
             System.out.print("Vuelve a intentarlo");
             matricula = entrada.inString();
         }
-        return new Vehiculo(matricula, modelo, tipoVehiculo.valueOf(tipo));
+        this.matricula = matricula;
+        this.modelo = modelo;
+        this.tipo = tipoVehiculo.valueOf(tipo);
     }
 
     //no he puesto marca en decirVehiculo porque no la pides al principio
     public String getVehiculo() {
-        return (" es el vehículo matrícula "+matricula+", modelo "+modelo+" y tipo "+tipo);
+        return (" es el vehículo matrícula "+matricula+", modelo "+modelo+" y tipo "+tipo+"\n");
     }
 
     public String getMatricula() {

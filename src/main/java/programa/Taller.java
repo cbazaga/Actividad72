@@ -39,6 +39,7 @@ public class Taller {
         if(colageneral.hayPrimero() == true){
             arrayBox[pedirNumero()].InsertarVehiculo(colageneral.primeroCola());
         }
+        else System.out.println("    No hay un vehículo para insertar\n");
     }
     
     public void MoverVehiculos(){

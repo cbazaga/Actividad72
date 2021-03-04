@@ -28,8 +28,10 @@ public class Box {
         if(array[0] != null){
             System.out.println("Tu vehículo no se ha podido insertar en el box ya que hay otro vehículo ocupando la primera fase de la revisión. ");
         }
-        else array[0] = vehiculo;
-        System.out.println("Tu vehículo ha sido insertado en la primera fase de revisión con éxito. ");
+        else {
+            array[0] = vehiculo;
+            System.out.println("Tu vehículo ha sido insertado en la primera fase de revisión con éxito. ");
+        }
     }
     
     public void MoverVehiculos(){
