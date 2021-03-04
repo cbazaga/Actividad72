@@ -24,14 +24,12 @@ public class Box {
         }
     }
     
-    public boolean InsertarVehiculo(Vehiculo vehiculo){
+    public void InsertarVehiculo(Vehiculo vehiculo){
         if(array[0] != null){
             System.out.println("Tu vehículo no se ha podido insertar en el box ya que hay otro vehículo ocupando la primera fase de la revisión. ");
-            return true;
         }
         else array[0] = vehiculo;
         System.out.println("Tu vehículo ha sido insertado en la primera fase de revisión con éxito. ");
-        return false;
     }
     
     public void MoverVehiculos(){
@@ -53,6 +51,13 @@ public class Box {
                 System.out.print("En la posición "+(i+1)+array[i].getVehiculo());
             }
         }
+    }
+    
+    public boolean EstadoInicioBox(){
+        if(array[0] == null){
+            return false;
+        }
+        else return true;
     }
     
     

@@ -28,17 +28,17 @@ public class Taller {
     }
     
     public void AltaVehiculo(){
-        if (colageneral.comprobarCola() == false){
-            System.exit(0);
-        }
-        else{
+        if (colageneral.comprobarCola() == true){
             vehiculo.pedir(colageneral);
             colageneral.insertarEnCola(vehiculo);
         }
+        
     }
     
     public void ReclamarVehiculo(){
-        
+        if(colageneral.hayPrimero() == true){
+            arrayBox[pedirNumero()].InsertarVehiculo(colageneral.primeroCola());
+        }
     }
     
     public void MoverVehiculos(){
