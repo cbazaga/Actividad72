@@ -11,7 +11,7 @@ package programa;
  */
 public class Box {
     public Vehiculo[] array = null;
-    private static int cantidad = 4;
+    final private static int cantidad = 4;
     
     public Box(){
         array = new Vehiculo[cantidad];
@@ -42,4 +42,17 @@ public class Box {
         }
         array[0] = null;
     }
+    
+    public void EstadoBox(){
+        for(int i=0; i<=array.length-1; i++){
+            if(array[i] == null){
+                System.out.println("No hay vehiculo en la posición "+(i+1));
+            }
+            else {
+                System.out.println("En la posición "+(i+1)+array[i].getVehiculo());
+            }
+        }
+    }
+    
+    
 }

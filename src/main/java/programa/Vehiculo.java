@@ -15,7 +15,8 @@ public class Vehiculo {
     private String modelo = null;
     public String matricula = null;
     private static final String PATRON = "\\d{4}[A-Z]{3}";
-    private tipoVehiculo tipo;
+    private tipoVehiculo tipo = null;
+    
     
     public Vehiculo(){
         
@@ -27,7 +28,7 @@ public class Vehiculo {
         this.tipo = tipo;
     }
     
-    public Vehiculo pedir(){
+    public Vehiculo pedir(ColaGeneral cola){
         GestorIO entrada = new GestorIO();
         String tipo=null;
         String modelo=null;
@@ -43,12 +44,28 @@ public class Vehiculo {
         
         System.out.println("Por último introduce la matrícula del vehículo con las letras mayúsculas: ");
         matricula = entrada.inString();
-        while(!Pattern.matches(PATRON, matricula)){
-            System.out.println("Vuelve a intentarlo");
+        System.out.println("");
+        while(!Pattern.matches(PATRON, matricula) || cola.comprobarMatricula(matricula) == true){
+            System.out.print("Vuelve a intentarlo");
             matricula = entrada.inString();
         }
         return new Vehiculo(matricula, modelo, tipoVehiculo.valueOf(tipo));
     }
+
+    //no he puesto marca en decirVehiculo porque no la pides al principio
+    public String getVehiculo() {
+        return (" es el vehículo matrícula "+matricula+", modelo "+modelo+" y tipo "+tipo);
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+    
+    
+    
+    
+    
+    
     
     
     
