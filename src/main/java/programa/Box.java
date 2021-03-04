@@ -24,8 +24,8 @@ public class Box {
         }
     }
     
-    public boolean HayVehiculo(Vehiculo vehiculo){
-        if(array[0] == null){
+    public boolean InsertarVehiculo(Vehiculo vehiculo){
+        if(array[0] != null){
             System.out.println("Tu vehículo no se ha podido insertar en el box ya que hay otro vehículo ocupando la primera fase de la revisión. ");
             return true;
         }
@@ -41,15 +41,16 @@ public class Box {
             i--;
         }
         array[0] = null;
+        System.out.println("Los vehículos han sido movidos de fase. ");
     }
     
     public void EstadoBox(){
         for(int i=0; i<=array.length-1; i++){
             if(array[i] == null){
-                System.out.println("No hay vehiculo en la posición "+(i+1));
+                System.out.println("No hay vehiculo en la posición "+(i+1)+"\n");
             }
             else {
-                System.out.println("En la posición "+(i+1)+array[i].getVehiculo());
+                System.out.print("En la posición "+(i+1)+array[i].getVehiculo());
             }
         }
     }

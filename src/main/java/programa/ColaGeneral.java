@@ -24,14 +24,25 @@ public class ColaGeneral {
         }
     }
     
-    public void comprobarCola(Vehiculo vehiculo){
-        for(int i=cola.length; i>0;i--){
-            if(cola[cola.length-1] !=null){
-                System.out.println("La cola general está completa");
+    public void insertarEnCola(Vehiculo vehiculo){
+        if(cola[cola.length-1]==null){
+            for(int i=0; i<cola.length-1;i++){
+                if(cola[i]==null){
+                    cola[i] = vehiculo;
+                    System.out.println("Se ha insertado el vehículo en la posición "+(i+1));
+                }
             }
-            else if(cola[i]==null && cola[i-1]!=null){
-                cola[i]=vehiculo;
-            }
+        }
+    }
+    
+    public boolean comprobarCola(){
+        if(cola[0] == null){
+            System.out.println("La cola no está completa");
+            return true; 
+        }
+        else {
+            System.out.println("La cola general está completa");
+            return false;
         }
     }
     

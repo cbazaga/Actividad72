@@ -20,13 +20,13 @@ public class Test {
         Vehiculo v4 = new Vehiculo("2222DJT", "C1", tipoVehiculo.coche);
         
         Box caja = new Box();
-        ArrayBox array = new ArrayBox();
+        Taller array = new Taller();
         
         caja.array[0] = v1;
         caja.array[1] = v2;
         caja.array[2] = v3;
         caja.array[3] = v4;
-        caja.EstadoBox();
+        Menu.menu(array);
         
         
         

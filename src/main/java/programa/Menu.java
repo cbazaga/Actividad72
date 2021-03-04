@@ -12,7 +12,7 @@ package programa;
 public class Menu {
     
     
-    public static void menu(){
+    public static void menu(Taller taller){
         GestorIO entrada = new GestorIO();
         System.out.println("                         Menú    ");
         System.out.println("------------------------------------------------------");
@@ -25,15 +25,15 @@ public class Menu {
         int numero = entrada.inInt();
         
         switch(numero){
-            case 1: 
+            case 1: taller.AltaVehiculo();
                 
-            case 2:
+            case 2: taller.ReclamarVehiculo();
                 
-            case 3:
+            case 3: taller.MoverVehiculos();
                 
-            case 4:
+            case 4: taller.InfoBox();
                 
-            case 5:
+            case 5: taller.InfoTodosBoxes();
                 
             case 6: break;
         }
