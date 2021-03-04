@@ -47,7 +47,7 @@ public class Box {
     public void EstadoBox(){
         for(int i=0; i<=array.length-1; i++){
             if(array[i] == null){
-                System.out.println("No hay vehiculo en la posición "+(i+1)+"\n");
+                System.out.println("No hay vehiculo en la posición "+(i+1));
             }
             else {
                 System.out.print("En la posición "+(i+1)+array[i].getVehiculo());

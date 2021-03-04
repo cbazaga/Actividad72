@@ -35,10 +35,11 @@ public class Vehiculo {
         String matricula=null;
         System.out.println("Introduce el tipo de vehículo: ");
         tipo = entrada.inString();
-        while(tipo.equalsIgnoreCase("camion")==false && tipo.equalsIgnoreCase("coche")==false && tipo.equalsIgnoreCase("furgoneta") && tipo.equalsIgnoreCase("microbus") == false){
+        while(tipo.equalsIgnoreCase("camion")==false && tipo.equalsIgnoreCase("coche")==false && tipo.equalsIgnoreCase("furgoneta")==false && tipo.equalsIgnoreCase("microbus") == false){
             System.out.println("Vuelve a intentarlo");
             tipo = entrada.inString();
         }
+        tipo = tipo.toLowerCase();
         System.out.println("Ahora introduce el modelo del vehículo: ");
         modelo = entrada.inString();
         
